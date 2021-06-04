@@ -142,11 +142,11 @@
                     }
                 ?>
                 <tr>
-                    <td><b>TOTAL</b></td>
+                    <td class = "low"><b>TOTAL</b></td>
                     <td><b><?=sprintf("%.2f", $total)?></b></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="update" class="btn btn-outline-primary">Update Cart</button></td>
+                    <td class = "low"><button type="submit" name="update" class="btn btn-outline-primary">Update Cart</button></td>
                     <td><button type="submit" name="clear" class="btn btn-outline-primary">Clear Cart</button></td>
                 </tr>
             </table>

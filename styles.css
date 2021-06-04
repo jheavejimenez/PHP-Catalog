@@ -4,3 +4,6 @@ div.mid{
     margin-right: auto;
     width: 30em
 }
+td.low{
+   text-align: center;
+}
