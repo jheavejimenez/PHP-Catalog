@@ -72,36 +72,43 @@
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="styles.css">
         <title>Cathalog</title>
     </head>
-    <body>
-        <h2>Catalog</h2>
+    
+    <body class="p-3 mb-2 bg-dark text-white">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <h1 class="display-5">CATALOG</h1>
+            </blockquote>
         Please add items from the list below to your shopping cart.
-        <form action="<?$_SERVER['PHP_SELF']?>" method="post">
-            <table border="0" cellspacing="10">
-                <?php
-                    //print items from the catalog for selection
-                    foreach ($CATALOG as $k=>$v)
-                    {
-                        echo "<tr><td colspan=2>";
-                        echo "<b>".$v['desc']."</b>";
-                        echo "</td></tr>\n";
-                        echo "<tr><td>";
-                        echo "Price per unit: ".$CATALOG[$k]['price'];
-                        echo "</td><td>Quantity: ";
-                        echo "<input size=4 type=text name=\"a_qty[" .$k. "]\">";
-                        echo "</td></tr>\n";
-                    }
-                ?>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" name="add" value="Add items to cart">
-                    </td>
-                </tr>
-            </table>
+        <div class = "mid">
+            <form action="<?$_SERVER['PHP_SELF']?>" method="post">
+                <table border="0" cellspacing="10">
+                    <?php
+                        //print items from the catalog for selection
+                        foreach ($CATALOG as $k=>$v)
+                        {
+                            echo "<tr><td colspan=2>";
+                            echo "<b>".$v['desc']."</b>";
+                            echo "</td></tr>\n";
+                            echo "<tr><td>";
+                            echo "Price per unit: ".$CATALOG[$k]['price'];
+                            echo "</td><td>Quantity: ";
+                            echo "<input size=4 type=text name=\"a_qty[" .$k. "]\">";
+                            echo "</td></tr>\n";
+                        }
+                    ?>
+                    <tr>
+                        <td colspan="2">
+                            <button type="button" name="add" class="btn btn-outline-primary">Add items to cart</button>
+                        </td>
+                    </tr>
+                </table>
+                </div>
             <hr/><hr/>
-            <h2>Shopping cart</h2>
+            <h1 class="display-6">Shopping Cart</h1>
             <table width="100%" border="0" cellspacing="10">
                 <?php
                     //initialize a variable to hold total cost
@@ -139,8 +146,8 @@
                     <td><b><?=sprintf("%.2f", $total)?></b></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" name="update" value="Update Cart"></td>
-                    <td><input type="submit" name="clear" value="Clear Cart"></td>
+                    <td><button type="submit" name="update" class="btn btn-outline-primary">Update Cart</button></td>
+                    <td><button type="submit" name="clear" class="btn btn-outline-primary">Clear Cart</button></td>
                 </tr>
             </table>
         </form>
