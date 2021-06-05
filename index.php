@@ -96,7 +96,7 @@
                 ?>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" name="add" value="Add items to cart">
+                        <button type="button" name="add" class="btn btn-outline-primary">Add items to cart</button>
                     </td>
                 </tr>
             </table>
