@@ -81,7 +81,7 @@
     <body class="p-3 mb-2 bg-dark text-white">
         <figure class="text-center">
             <blockquote class="blockquote">
-                <h1 class="display-5">CATALOG</h1>
+                <h1 class="display-5"></h1>
             </blockquote>
         Please add items from the list below to your shopping cart.
         <div class = "mid">
@@ -96,8 +96,9 @@
                             echo "</td></tr>\n";
                             echo "<tr><td>";
                             echo "Price per unit: ".$CATALOG[$k]['price'];
-                            echo "</td><td>Quantity: ";
-                            echo "<input size=4 type=text name=\"a_qty[" .$k. "]\">";
+                            echo "<tr><td>";echo "<tr><td>";echo "<tr><td>";
+                            echo "</td><td><td>Quantity: ";
+                            echo "<input size=10 type=text name=\"a_qty[" .$k. "]\">";
                             echo "</td></tr>\n";
                         }
                     ?>
@@ -109,7 +110,7 @@
                 </table>
                 </div>
             <hr/><hr/>
-            <h1 class="display-6">Shopping Cart</h1>
+            <h2 class="display-6">Shopping Cart</h2>
             <table width="100%" border="0" cellspacing="10">
                 <?php
                     //initialize a variable to hold total cost
@@ -151,6 +152,6 @@
                     <td><button type="submit" name="clear" class="btn btn-outline-primary">Clear Cart</button></td>
                 </tr>
             </table>
-        </form>
+        </figure>
     </body>
 </html>
