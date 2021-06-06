@@ -103,7 +103,7 @@
                     ?>
                     <tr>
                         <td colspan="2">
-                            <button type="button" name="add" class="btn btn-outline-primary">Add items to cart</button>
+                            <button type="add" name="add" class="btn btn-outline-primary">Add items to cart</button>
                         </td>
                     </tr>
                 </table>
