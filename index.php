@@ -152,6 +152,6 @@
                     <td><button type="submit" name="clear" class="btn btn-outline-primary">Clear Cart</button></td>
                 </tr>
             </table>
-        </figure>
+        </form>
     </body>
 </html>
