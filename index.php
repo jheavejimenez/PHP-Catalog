@@ -79,7 +79,7 @@
     </head>
     
     <body class="p-3 mb-2 bg-dark text-white">
-        <figure class="text-center">
+        <form class="text-center">
             <blockquote class="blockquote">
                 <h1 class="display-5"></h1>
             </blockquote>
@@ -104,7 +104,7 @@
                     ?>
                     <tr>
                         <td colspan="2">
-                            <button type="button" name="add" class="btn btn-outline-primary">Add items to cart</button>
+                            <button type="add" name="add" class="btn btn-outline-primary">Add items to cart</button>
                         </td>
                     </tr>
                 </table>
